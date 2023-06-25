@@ -13,11 +13,8 @@ const HomePage = () => {
     <div className={styles.container}>
       {home.map((item) => (
         <div>
-          {console.log(item.capital)}
-          <h2>Hnjmkm</h2>
-          name:
-          {' '}
           {item.name.official}
+          <br />
           Capital City:
           {' '}
           {item.capital[0]}
