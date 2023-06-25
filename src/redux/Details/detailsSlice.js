@@ -1,11 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    details: []
-}
+  details: [],
+};
 const detailsSlice = createSlice({
-    name:details,
-    initialState,
-    reducers:{},
-    extraReducers:{}
-})
+  name: details,
+  initialState,
+  reducers: {},
+});
