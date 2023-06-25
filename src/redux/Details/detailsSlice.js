@@ -4,7 +4,9 @@ const initialState = {
   details: [],
 };
 const detailsSlice = createSlice({
-  name: details,
+  name: 'details',
   initialState,
   reducers: {},
 });
+
+export default detailsSlice.reducer;
