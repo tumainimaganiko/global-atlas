@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import uuid4 from "uuid4"
+import uuid4 from 'uuid4';
 import styles from '../styles/HomePage.module.css';
 import { fetchCountries } from '../redux/Home/homeSlice';
 
