@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import uuid4 from 'uuid4';
 import { NavLink } from 'react-router-dom';
+import { FaRegArrowAltCircleRight } from 'react-icons/fa';
 import styles from '../styles/HomePage.module.css';
 import { fetchCountries } from '../redux/Home/homeSlice';
 
@@ -27,13 +28,18 @@ const HomePage = () => {
           home.map((item) => (
             <div key={uuid4()}>
               <NavLink to="details" state={{ country: item }} className={styles.link}>
-                {item.name.official}
+                <FaRegArrowAltCircleRight />
                 {' '}
                 <br />
                 <br />
-                {item.population}
-                {' '}
-                people
+                <p>
+                  {item.name.official}
+                  {' '}
+                  <br />
+                  {item.population}
+                  {' '}
+                  people
+                </p>
               </NavLink>
             </div>
           ))
@@ -48,6 +54,7 @@ const HomePage = () => {
           }).map((item) => (
             <div key={uuid4()}>
               <NavLink to="details" state={{ country: item }} className={styles.link}>
+                <FaRegArrowAltCircleRight />
                 {item.name.official}
                 <br />
                 <br />

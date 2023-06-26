@@ -7,12 +7,19 @@
 }
 
 .container div {
-  /* padding: 10px; */
-  background-color: dodgerblue;
-  border: 2px solid gray;
-  width: 98%;
+  background-color: blue;
+  border: 1px solid gray;
+  width: 100%;
   text-align: right;
   height: 120px;
+}
+
+.container div p {
+  vertical-align: bottom;
+}
+
+.container div:nth-child(3n - 1) {
+  background-color: rgba(0, 0, 255, .75);
 }
 
 .link {
