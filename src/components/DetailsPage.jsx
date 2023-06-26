@@ -1,15 +1,17 @@
-import React from 'react';
-import { useLocation } from 'react-router';
-import { NavLink } from 'react-router-dom';
-import { FaRegArrowAltCircleRight, FaAngleLeft } from 'react-icons/fa';
-import styles from '../styles/DetailsPage.module.css';
+import React from "react";
+import { useLocation } from "react-router";
+import { NavLink } from "react-router-dom";
+import { FaRegArrowAltCircleRight, FaAngleLeft } from "react-icons/fa";
+import styles from "../styles/DetailsPage.module.css";
 
 const DetailsPage = () => {
   const location = useLocation();
   const { country } = location.state;
   return (
     <div className={styles.container}>
-      <NavLink className={styles.link} to="/"><FaAngleLeft /></NavLink>
+      <NavLink className={styles.link} to="/">
+        <FaAngleLeft />
+      </NavLink>
       <div>
         <h2>{country.name.official}</h2>
         <p className={styles.flag}>{country.flag}</p>
@@ -18,18 +20,21 @@ const DetailsPage = () => {
             <p>
               Capital City
               <span>
-                {country.capital[0]}
-                {' '}
-                <span><FaRegArrowAltCircleRight /></span>
+                {country.capital[0]}{" "}
+                <span>
+                  <FaRegArrowAltCircleRight />
+                </span>
               </span>
             </p>
           )}
-          { country.continents && (
+          {country.continents && (
             <p>
               Continent
               <span>
                 {country.continents}
-                <span><FaRegArrowAltCircleRight /></span>
+                <span>
+                  <FaRegArrowAltCircleRight />
+                </span>
               </span>
             </p>
           )}
@@ -38,7 +43,9 @@ const DetailsPage = () => {
               Timezone
               <span>
                 {country.timezones[0]}
-                <span><FaRegArrowAltCircleRight /></span>
+                <span>
+                  <FaRegArrowAltCircleRight />
+                </span>
               </span>
             </p>
           )}
@@ -47,7 +54,9 @@ const DetailsPage = () => {
               Population
               <span>
                 {country.population}
-                <span><FaRegArrowAltCircleRight /></span>
+                <span>
+                  <FaRegArrowAltCircleRight />
+                </span>
               </span>
             </p>
           )}
@@ -56,7 +65,9 @@ const DetailsPage = () => {
               Area in square meters
               <span>
                 {country.area}
-                <span><FaRegArrowAltCircleRight /></span>
+                <span>
+                  <FaRegArrowAltCircleRight />
+                </span>
               </span>
             </p>
           )}
@@ -65,7 +76,9 @@ const DetailsPage = () => {
               Sub region
               <span>
                 {country.subregion}
-                <span><FaRegArrowAltCircleRight /></span>
+                <span>
+                  <FaRegArrowAltCircleRight />
+                </span>
               </span>
             </p>
           )}
