@@ -1,4 +1,21 @@
+.home {
+
+}
 .container {
   display: grid;
   grid-template-columns: auto auto;
+}
+
+.container div {
+  /* padding: 10px; */
+  background-color: dodgerblue;
+  border: 2px solid gray;
+  width: 98%;
+  text-align: right;
+  height: 120px;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
 }
