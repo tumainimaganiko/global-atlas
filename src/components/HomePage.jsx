@@ -19,15 +19,21 @@ const HomePage = () => {
   };
   return (
     <>
-      <div>
+      <div className={styles.home}>
         <input type="search" name="search" value={text} onChange={handleSearch} />
       </div>
       <div className={styles.container}>
         {text.length <= 0 ? (
           home.map((item) => (
             <div key={uuid4()}>
-              <NavLink to="details" state={{ country: item }}>
+              <NavLink to="details" state={{ country: item }} className={styles.link}>
                 {item.name.official}
+                {' '}
+                <br />
+                <br />
+                {item.population}
+                {' '}
+                people
               </NavLink>
             </div>
           ))
@@ -41,8 +47,13 @@ const HomePage = () => {
             return null;
           }).map((item) => (
             <div key={uuid4()}>
-              <NavLink to="details" state={{ country: item }}>
+              <NavLink to="details" state={{ country: item }} className={styles.link}>
                 {item.name.official}
+                <br />
+                <br />
+                {item.population}
+                {' '}
+                people
               </NavLink>
             </div>
           ))
