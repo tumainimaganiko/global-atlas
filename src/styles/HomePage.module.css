@@ -1,5 +1,15 @@
 .home {
+  /* background-color: blue; */
+  text-align: center;
+}
 
+.home h2,h3 {
+  margin: 0;
+}
+
+input {
+  width: 90%;
+  margin: 2% 5%;
 }
 .container {
   display: grid;
@@ -7,22 +17,18 @@
 }
 
 .container div {
-  background-color: blue;
-  border: 1px solid gray;
-  width: 100%;
+  border: 1px solid #fff;
+  width: 98%;
   text-align: right;
   height: 120px;
+  margin: 0 1%;
 }
 
 .container div p {
   vertical-align: bottom;
 }
 
-.container div:nth-child(3n - 1) {
-  background-color: rgba(0, 0, 255, .75);
-}
-
 .link {
-  color: #fff;
+  color: black;
   text-decoration: none;
 }

@@ -21,7 +21,9 @@ const HomePage = () => {
   return (
     <>
       <div className={styles.home}>
-        <input type="search" name="search" value={text} onChange={handleSearch} />
+        <h1>Global Atlas</h1>
+        <h2>Explore and Discover</h2>
+        <input type="search" name="search" value={text} onChange={handleSearch} placeholder="search by country name" />
       </div>
       <div className={styles.container}>
         {text.length <= 0 ? (
