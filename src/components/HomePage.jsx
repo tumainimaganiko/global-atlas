@@ -32,8 +32,6 @@ const HomePage = () => {
               <NavLink to="details" state={{ country: item }} className={styles.link}>
                 <FaRegArrowAltCircleRight />
                 {' '}
-                <br />
-                <br />
                 <p>
                   {item.name.official}
                   {' '}
