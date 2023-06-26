@@ -15,12 +15,12 @@ input {
 .container {
   display: grid;
   grid-template-columns: auto auto;
+  text-align: right;
 }
 
 .container div {
   border: 1px solid #fff;
   width: 98%;
-  text-align: right;
   margin: 0 1%;
   padding: 0;
 }
