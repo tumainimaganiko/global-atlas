@@ -21,8 +21,8 @@ input {
   border: 1px solid #fff;
   width: 98%;
   text-align: right;
-  height: 150px;
   margin: 0 1%;
+  padding: 0;
 }
 
 .container div p {
@@ -32,4 +32,9 @@ input {
 .link {
   color: black;
   text-decoration: none;
+}
+
+.container p {
+  height: 120px;
+  margin: 0;
 }

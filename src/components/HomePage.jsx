@@ -55,12 +55,13 @@ const HomePage = () => {
             <div key={uuid4()}>
               <NavLink to="details" state={{ country: item }} className={styles.link}>
                 <FaRegArrowAltCircleRight />
-                {item.name.official}
-                <br />
-                <br />
-                {item.population}
-                {' '}
-                people
+                <p>
+                  {item.name.official}
+                  <br />
+                  {item.population}
+                  {' '}
+                  people
+                </p>
               </NavLink>
             </div>
           ))
