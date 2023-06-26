@@ -25,6 +25,11 @@ input {
   padding: 0;
 }
 
+.container p {
+  height: 120px;
+  margin: 0;
+}
+
 .container div p {
   vertical-align: bottom;
 }
@@ -32,9 +37,4 @@ input {
 .link {
   color: black;
   text-decoration: none;
-}
-
-.container p {
-  height: 120px;
-  margin: 0;
 }

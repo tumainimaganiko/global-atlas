@@ -1,41 +1,41 @@
 .flag {
-    font-size: 100px;
-    margin: 0;
-    text-align: center;
+  font-size: 100px;
+  margin: 0;
+  text-align: center;
 }
 
 .container {
-    color: #fff;
+  color: #fff;
 }
 
 .container h2 {
-    text-align: center;
-    color: black;
+  text-align: center;
+  color: black;
 }
 
 .details p {
-    margin: 0;
-    padding: 20px 5px;
+  margin: 0;
+  padding: 20px 5px;
 }
 
 .details p:nth-child(odd) {
-    background-color: blue;
+  background-color: blue;
 }
 
 .details p:nth-child(even) {
-    background-color: rgb(51, 51, 236);
+  background-color: rgb(51, 51, 236);
 }
 
 .details p > span {
-    position: absolute;
-    right: 5px;
+  position: absolute;
+  right: 5px;
 }
 
 .details p > span span {
-    padding-left: 27px;
+  padding-left: 27px;
 }
 
 .link {
-    font-size: 32px;
-    color: black;
+  font-size: 32px;
+  color: black;
 }
