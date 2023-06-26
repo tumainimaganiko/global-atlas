@@ -34,3 +34,8 @@
 .details p > span span {
     padding-left: 27px;
 }
+
+.link {
+    font-size: 32px;
+    color: black;
+}

@@ -9,7 +9,7 @@ const DetailsPage = () => {
   const { country } = location.state;
   return (
     <div className={styles.container}>
-      <NavLink to="/"><FaAngleLeft /></NavLink>
+      <NavLink className={styles.link} to="/"><FaAngleLeft /></NavLink>
       <div>
         <h2>{country.name.official}</h2>
         <p className={styles.flag}>{country.flag}</p>
