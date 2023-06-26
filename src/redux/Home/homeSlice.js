@@ -28,9 +28,9 @@ const homeSlice = createSlice({
   reducers: {},
   extraReducers: (builders) => {
     builders.addCase(fetchCountries.fulfilled, (state, action) => {
+      state.home = [];
       action.payload.forEach((value) => (
         state.home.push(value)
-        // console.log(value)
       ));
     });
   },
