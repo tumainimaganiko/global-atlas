@@ -15,7 +15,7 @@ const HomePage = () => {
     <div className={styles.container}>
       {home.map((item) => (
         <div key={uuid4()}>
-          <NavLink to="details" state={{country: item}}>
+          <NavLink to="details" state={{ country: item }}>
             {item.name.official}
           </NavLink>
         </div>
