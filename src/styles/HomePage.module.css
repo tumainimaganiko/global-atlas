@@ -1,5 +1,4 @@
 .home {
-  /* background-color: blue; */
   text-align: center;
 }
 
@@ -22,7 +21,7 @@ input {
   border: 1px solid #fff;
   width: 98%;
   text-align: right;
-  height: 120px;
+  height: 150px;
   margin: 0 1%;
 }
 
