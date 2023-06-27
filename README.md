@@ -34,7 +34,7 @@
 
 # 📖 Global Atlas <a name="about-project"></a>
 
-**The Global Atlas project** is an open-source initiative that aims to create a comprehensive and interactive global atlas of various geographical data. It provides a centralized platform to explore, visualize, and analyze diverse geographical information from around the world..
+**The Global Atlas project** is a Single Page App (SPA) that aims to create a comprehensive and interactive global atlas of various geographical data. It provides a centralized platform to explore, visualize, and analyze diverse geographical information from around the world..
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -192,7 +192,9 @@ If you like this project, please give it a ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for accelerating my growth
+- [Rest Country API](https://rapidapi.com/saif.ali40/api/rest-country-api/)
+- Original Design Idea by: [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
+- I would like to thank Microverse for accelerating my growth
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
