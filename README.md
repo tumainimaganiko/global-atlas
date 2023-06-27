@@ -15,6 +15,7 @@
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
+  - [🚀 Video Link ](#-video-link-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -63,6 +64,12 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://global-atlas.onrender.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🚀 Video Link <a name="live-demo"></a>
+-[Video describing the project](https://www.loom.com/share/84715c3fa8454ad4990108d94cd63bd6)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -162,6 +169,12 @@ You can deploy this project using:
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b 'branchname'`)
+3. Commit your Changes (`git commit -m 'Add some branchname'`)
+4. Push to the Branch (`git push origin branchname`)
+5. Open a Pull Request
+
 
 Feel free to check the [issues page](https://github.com/tumainimaganiko/global-atlas/issues).
 
