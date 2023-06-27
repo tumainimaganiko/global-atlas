@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { FaRegArrowAltCircleRight } from 'react-icons/fa';
 import styles from '../styles/HomePage.module.css';
 import { fetchCountries } from '../redux/Home/homeSlice';
+import Searching from './Searching';
 
 const HomePage = () => {
   const { home } = useSelector((store) => store.home);
@@ -42,8 +43,11 @@ const HomePage = () => {
               >
                 <FaRegArrowAltCircleRight />
                 {' '}
+                <span>{item.flag}</span>
                 <p>
-                  {item.name.official}
+                  <br />
+                  <br />
+                  {item.name.common}
                   {' '}
                   <br />
                   {item.population}
@@ -53,33 +57,7 @@ const HomePage = () => {
               </NavLink>
             </div>
           ))
-          : home
-            .filter((test) => {
-              const ans = test.name.official.toLowerCase();
-
-              if (ans.includes(text.toLowerCase())) {
-                return ans;
-              }
-              return null;
-            })
-            .map((item) => (
-              <div key={uuid4()}>
-                <NavLink
-                  to="details"
-                  state={{ country: item }}
-                  className={styles.link}
-                >
-                  <FaRegArrowAltCircleRight />
-                  <p>
-                    {item.name.official}
-                    <br />
-                    {item.population}
-                    {' '}
-                    people
-                  </p>
-                </NavLink>
-              </div>
-            ))}
+          : (<Searching myArray={home} text={text} />)}
       </div>
     </>
   );
