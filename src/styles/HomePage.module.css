@@ -15,14 +15,21 @@ input {
 .container {
   display: grid;
   grid-template-columns: auto auto;
-  text-align: right;
 }
 
 .container div {
   border: 1px solid #fff;
   width: 98%;
   margin: 0 1%;
+  text-align: right;
   padding: 0;
+}
+
+.container div span {
+  display: flex;
+  font-size: 52px;
+  margin: 0;
+  justify-content: center;
 }
 
 .container p {
