@@ -38,4 +38,7 @@ const Searching = ({ myArray, text }) => (
 
 export default Searching;
 
-
+Searching.propTypes = PropTypes.shape({
+  myArray: PropTypes.arrayOf(string),
+  text: PropTypes.string,
+}).isRequired;
