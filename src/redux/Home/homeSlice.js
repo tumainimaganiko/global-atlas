@@ -15,12 +15,8 @@ const options = {
 };
 
 export const fetchCountries = createAsyncThunk('home/fetchCountries', async () => {
-  try {
-    const response = await axios.request(options);
-    return response.data;
-  } catch (error) {
-    return error;
-  }
+  const response = await axios.request(options);
+  return response.data;
 });
 const homeSlice = createSlice({
   name: 'home',
@@ -28,10 +24,14 @@ const homeSlice = createSlice({
   reducers: {},
   extraReducers: (builders) => {
     builders.addCase(fetchCountries.fulfilled, (state, action) => {
-      state.home = [];
-      action.payload.forEach((value) => (
-        state.home.push(value)
-      ));
+      if (action.payload && Array.isArray(action.payload)) {
+        state.home = [];
+        action.payload.forEach((value) => (
+          state.home.push(value)
+        ));
+      } else {
+        state.home = [];
+      }
     });
   },
 });

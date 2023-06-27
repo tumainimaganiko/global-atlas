@@ -9,11 +9,11 @@ const Searching = ({ myArray, text }) => (
   <>
     {myArray
       .filter((item) => {
-        const ans = item.name.common.toLowerCase();
-        if (ans.includes(text.toLowerCase())) {
-          return ans;
+        if (item && item.name && item.name.common) {
+          const ans = item.name.common.toLowerCase();
+          return ans.includes(text.toLowerCase());
         }
-        return null;
+        return false;
       })
       .map((item) => (
         <div key={uuid4()}>

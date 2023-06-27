@@ -6,83 +6,53 @@ import styles from '../styles/DetailsPage.module.css';
 
 const DetailsPage = () => {
   const location = useLocation();
-  const { country } = location.state;
+  const country = location.state?.country;
+
+  const renderDetail = (label, value) => (
+    <p>
+      {label}
+      <span>
+        {value}
+        <span>
+          <FaRegArrowAltCircleRight />
+        </span>
+      </span>
+    </p>
+  );
+
   return (
     <div className={styles.container}>
       <NavLink className={styles.link} to="/">
         <FaAngleLeft />
       </NavLink>
       <div>
-        <h2>{country.name.official}</h2>
-        <p className={styles.flag}>{country.flag}</p>
+        {country && country.name && country.name.official && (
+          <>
+            <h2>{country.name.official}</h2>
+            {country.flag && <p className={styles.flag}>{country.flag}</p>}
+          </>
+        )}
+
         <div className={styles.details}>
-          {country.capital[0] && (
-            <p>
-              Capital City
-              <span>
-                {country.capital[0]}
-                {' '}
-                <span>
-                  <FaRegArrowAltCircleRight />
-                </span>
-              </span>
-            </p>
-          )}
-          {country.continents && (
-            <p>
-              Continent
-              <span>
-                {country.continents}
-                <span>
-                  <FaRegArrowAltCircleRight />
-                </span>
-              </span>
-            </p>
-          )}
-          {country.timezones && (
-            <p>
-              Timezone
-              <span>
-                {country.timezones[0]}
-                <span>
-                  <FaRegArrowAltCircleRight />
-                </span>
-              </span>
-            </p>
-          )}
-          {country.population !== 0 && (
-            <p>
-              Population
-              <span>
-                {country.population}
-                <span>
-                  <FaRegArrowAltCircleRight />
-                </span>
-              </span>
-            </p>
-          )}
-          {country.area && (
-            <p>
-              Area in square meters
-              <span>
-                {country.area}
-                <span>
-                  <FaRegArrowAltCircleRight />
-                </span>
-              </span>
-            </p>
-          )}
-          {country.subreagion && (
-            <p>
-              Sub region
-              <span>
-                {country.subregion}
-                <span>
-                  <FaRegArrowAltCircleRight />
-                </span>
-              </span>
-            </p>
-          )}
+          {country
+            && country.capital
+            && country.capital[0]
+            && renderDetail('Capital City', country.capital[0])}
+          {country
+            && country.continents
+            && renderDetail('Continent', country.continents)}
+          {country
+            && country.timezones
+            && renderDetail('Timezone', country.timezones[0])}
+          {country
+            && country.population !== 0
+            && renderDetail('Population', country.population)}
+          {country
+            && country.area
+            && renderDetail('Area in square meters', country.area)}
+          {country
+            && country.subregion
+            && renderDetail('Sub region', country.subregion)}
         </div>
       </div>
     </div>
