@@ -1,27 +1,29 @@
-import renderer from 'react-test-renderer';
-import { Provider } from 'react-redux';
-import { MemoryRouter } from 'react-router-dom';
-import axios from 'axios';
-import { configureStore } from '@reduxjs/toolkit';
-import myCountries from './countryData';
-import DetailsPage from '../components/DetailsPage';
+import renderer from "react-test-renderer";
+import { Provider } from "react-redux";
+import { MemoryRouter } from "react-router-dom";
+import axios from "axios";
+import { configureStore } from "@reduxjs/toolkit";
+import myCountries from "./countryData";
+import DetailsPage from "../components/DetailsPage";
 
-jest.mock('axios');
+jest.mock("axios");
 const reducer = (
   state = {
     home: { home: myCountries },
-  },
+  }
 ) => state;
 const store = configureStore({ reducer });
 
-it('Should Render Country details', () => {
+it("Should Render Country details", () => {
   axios.get.mockResolvedValue({ data: myCountries });
-  const tree = renderer.create(
-    <MemoryRouter>
-      <Provider store={store}>
-        <DetailsPage />
-      </Provider>
-    </MemoryRouter>,
-  ).toJSON();
+  const tree = renderer
+    .create(
+      <MemoryRouter>
+        <Provider store={store}>
+          <DetailsPage />
+        </Provider>
+      </MemoryRouter>
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
