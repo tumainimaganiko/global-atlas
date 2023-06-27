@@ -1,22 +1,4 @@
-.home {
-    text-align: center;
-  }
-  
-  .home h2,
-  h3 {
-    margin: 0;
-  }
-  
-  input {
-    width: 90%;
-    margin: 2% 5%;
-  }
-  
-  .container {
-    display: grid;
-    /* grid-template-columns: auto auto; */
-  }
-  
+
   .container div {
     border: 1px solid #fff;
     width: 98%;
