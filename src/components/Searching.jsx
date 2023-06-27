@@ -6,7 +6,7 @@ import uuid4 from 'uuid4';
 import styles from '../styles/Searching.module.css';
 
 const Searching = ({ myArray, text }) => (
-  <div className={styles.container}>
+  <>
     {
             myArray.filter((item) => {
               const ans = item.name.common.toLowerCase();
@@ -22,6 +22,7 @@ const Searching = ({ myArray, text }) => (
                   className={styles.link}
                 >
                   <FaRegArrowAltCircleRight />
+                  <span>{item.flag}</span>
                   <p>
                     {item.name.common}
                     <br />
@@ -33,7 +34,7 @@ const Searching = ({ myArray, text }) => (
               </div>
             ))
 }
-  </div>
+  </>
 );
 
 export default Searching;
