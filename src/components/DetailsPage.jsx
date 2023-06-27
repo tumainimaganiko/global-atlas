@@ -1,8 +1,8 @@
-import React from 'react';
-import { useLocation } from 'react-router';
-import { NavLink } from 'react-router-dom';
-import { FaRegArrowAltCircleRight, FaAngleLeft } from 'react-icons/fa';
-import styles from '../styles/DetailsPage.module.css';
+import React from "react";
+import { useLocation } from "react-router";
+import { NavLink } from "react-router-dom";
+import { FaRegArrowAltCircleRight, FaAngleLeft } from "react-icons/fa";
+import styles from "../styles/DetailsPage.module.css";
 
 const DetailsPage = () => {
   const location = useLocation();
@@ -20,8 +20,7 @@ const DetailsPage = () => {
             <p>
               Capital City
               <span>
-                {country.capital[0]}
-                {' '}
+                {country.capital[0]}{" "}
                 <span>
                   <FaRegArrowAltCircleRight />
                 </span>
